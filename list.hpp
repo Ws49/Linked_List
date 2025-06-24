@@ -29,9 +29,9 @@ class LinkedList{
     public:
         void add(T value);
         bool remove(T value);
-        T getNode(T key);
-        vector<T> getAllNodes();
-        void printAllNodes();
+        T getValue(T key);
+        vector<T> getAllValues();
+        void printAll();
         LinkedList();
         ~LinkedList();
 };
@@ -87,7 +87,7 @@ bool LinkedList<T>::remove(T value){
 }
 
 template<typename T>
-T LinkedList<T>::getNode(T key){
+T LinkedList<T>::getValue(T key){
     Node<T> * lastValue = startList;
 
     if(lastValue->getValue() == key){
@@ -108,7 +108,7 @@ T LinkedList<T>::getNode(T key){
 }
 
 template<typename T>
-void LinkedList<T>::printAllNodes(){   
+void LinkedList<T>::printAll(){   
     if(startList == nullptr){
         cout << "VALUE NOT FOUND!" << endl;
     }else{
@@ -123,7 +123,7 @@ void LinkedList<T>::printAllNodes(){
 }
 
 template<typename T>
-vector<T> LinkedList<T>::getAllNodes(){
+vector<T> LinkedList<T>::getAllValues(){
     vector<Node<T>*> values;
 
     Node<T> * lastValue = startList;

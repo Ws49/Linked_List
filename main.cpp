@@ -19,7 +19,7 @@ int main()
         linked.add((Employe(name,cpf,email)));
     }
 
-    cout << linked.getNode(Employe("Rafael Porto","","")) << endl;
+    cout << linked.getValue(Employe("Rafael Porto","","")) << endl;
 
    
     return 0;
